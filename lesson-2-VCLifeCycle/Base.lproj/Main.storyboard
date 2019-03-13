@@ -18,19 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-Xi-pn0">
-                                <rect key="frame" x="16" y="20" width="343" height="438"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-Xi-pn0">
+                                <rect key="frame" x="16" y="36" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.99859894810000005" blue="0.99942349549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.63084345205689552" blue="0.047568217569798454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="zOu-Ss-wWf" firstAttribute="bottom" secondItem="2kx-Xi-pn0" secondAttribute="bottom" constant="160" id="1YG-te-M8j"/>
+                            <constraint firstItem="zOu-Ss-wWf" firstAttribute="bottom" secondItem="2kx-Xi-pn0" secondAttribute="bottom" constant="60" id="1YG-te-M8j"/>
                             <constraint firstItem="zOu-Ss-wWf" firstAttribute="trailing" secondItem="2kx-Xi-pn0" secondAttribute="trailing" constant="16" id="5Jr-AY-cgF"/>
                             <constraint firstItem="2kx-Xi-pn0" firstAttribute="leading" secondItem="zOu-Ss-wWf" secondAttribute="leading" constant="16" id="8bq-gH-Vd8"/>
-                            <constraint firstItem="2kx-Xi-pn0" firstAttribute="top" secondItem="zOu-Ss-wWf" secondAttribute="top" id="k9e-Hr-6ha"/>
+                            <constraint firstItem="2kx-Xi-pn0" firstAttribute="top" secondItem="zOu-Ss-wWf" secondAttribute="top" constant="16" id="k9e-Hr-6ha"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zOu-Ss-wWf"/>
                     </view>
@@ -51,18 +52,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sKe-a0-uON">
-                                <rect key="frame" x="16" y="20" width="343" height="438"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKe-a0-uON">
+                                <rect key="frame" x="16" y="36" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.99859894810000005" blue="0.99942349549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95261086220271252" blue="0.13878383534966754" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8fZ-KJ-R6X" firstAttribute="trailing" secondItem="sKe-a0-uON" secondAttribute="trailing" constant="16" id="ZlA-va-c8b"/>
-                            <constraint firstItem="8fZ-KJ-R6X" firstAttribute="bottom" secondItem="sKe-a0-uON" secondAttribute="bottom" constant="160" id="cas-is-5AG"/>
-                            <constraint firstItem="sKe-a0-uON" firstAttribute="top" secondItem="8fZ-KJ-R6X" secondAttribute="top" id="dfk-D2-DuB"/>
+                            <constraint firstItem="8fZ-KJ-R6X" firstAttribute="bottom" secondItem="sKe-a0-uON" secondAttribute="bottom" constant="60" id="cas-is-5AG"/>
+                            <constraint firstItem="sKe-a0-uON" firstAttribute="top" secondItem="8fZ-KJ-R6X" secondAttribute="top" constant="16" id="dfk-D2-DuB"/>
                             <constraint firstItem="sKe-a0-uON" firstAttribute="leading" secondItem="8fZ-KJ-R6X" secondAttribute="leading" constant="16" id="qtR-ie-chp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8fZ-KJ-R6X"/>
@@ -129,23 +131,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-A0-NBo">
-                                <rect key="frame" x="16" y="20" width="343" height="438"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-A0-NBo">
+                                <rect key="frame" x="16" y="36" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.99859894810000005" blue="0.99942349549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.84555132772020725" green="0.28945085719808505" blue="0.062984515005202635" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Ere-A0-NBo" firstAttribute="leading" secondItem="d2G-NB-Ohs" secondAttribute="leading" constant="16" id="BYO-vB-Xzd"/>
-                            <constraint firstItem="Ere-A0-NBo" firstAttribute="top" secondItem="d2G-NB-Ohs" secondAttribute="top" id="RhE-YH-uaU"/>
+                            <constraint firstItem="Ere-A0-NBo" firstAttribute="top" secondItem="d2G-NB-Ohs" secondAttribute="top" constant="16" id="RhE-YH-uaU"/>
                             <constraint firstItem="d2G-NB-Ohs" firstAttribute="trailing" secondItem="Ere-A0-NBo" secondAttribute="trailing" constant="16" id="nod-ib-YtQ"/>
-                            <constraint firstItem="d2G-NB-Ohs" firstAttribute="bottom" secondItem="Ere-A0-NBo" secondAttribute="bottom" constant="160" id="r8C-sN-ZVq"/>
+                            <constraint firstItem="d2G-NB-Ohs" firstAttribute="bottom" secondItem="Ere-A0-NBo" secondAttribute="bottom" constant="60" id="r8C-sN-ZVq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2G-NB-Ohs"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Q8f-Qe-8aa"/>
+                    <connections>
+                        <outlet property="textView" destination="Ere-A0-NBo" id="JVh-fZ-hfS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3K-R8-h9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

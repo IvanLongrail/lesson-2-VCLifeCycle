@@ -10,64 +10,53 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //var methodsArray = [String]()
-    var methodsName: String = "" {
-        didSet {
-//            textView.text += methodsName
-//            methodsArray.append(methodsName)
-            
-            for viewController in tabBarController!.viewControllers! {
-                let vC = viewController as! ViewController
-                print(methodsName)
-                if let tV = vC.textView {
-                    tV.text += methodsName + "\n"
-                }
-            }
-            
-        }
-    }
     
     @IBOutlet weak var textView: UITextView!
     
-    func getMessage(_ function: String = #function) {
-        self.methodsName = "\(self.title ?? ""): \(function)"
-//        for method in methodsArray {
-//            print(method)
-//        }
-        //print("_____*__*__*__*__*__*__*__*_____")
+    func updateTV(_ function: String = #function) {
+        let currentText = getText(title: self.title, function: function)
+        textView.text = currentText
+        
+        // Scroll to the bottom of list of called methods
+        textView.scrollRangeToVisible(NSMakeRange(currentText.count, 0))
+        
+        // I don't fully understand how it works, but these two bottom lines are necessary for correct scrolling
+        // Maybe it`s happens because of this information from Apple documentation: "When scrolling is disabled, the scroll view does not accept touch events; it forwards them up the responder chain."
+        textView.isScrollEnabled = false
+        textView.isScrollEnabled = true
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMessage()
+        self.textView.backgroundColor = self.view.backgroundColor?.getDarkColor()
+        //self.textView.textColor = self.view.backgroundColor.ge
+        self.textView.layer.cornerRadius = 5
+        updateTV()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getMessage()
+        updateTV()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getMessage()
+        updateTV()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        getMessage()
+        updateTV()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        getMessage()
+        updateTV()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        getMessage()
+        updateTV()
     }
-}
-
-extension ViewController: UITextViewDelegate {
-    
 }
