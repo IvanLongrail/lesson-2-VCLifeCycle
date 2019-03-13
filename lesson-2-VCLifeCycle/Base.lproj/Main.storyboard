@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Orange-->
+        <!--Yellow-->
         <scene sceneID="ihG-Dm-Ri5">
             <objects>
-                <viewController title="Orange" id="KpE-Wx-acD" customClass="ViewController" customModule="lesson_2_VCLifeCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Yellow" id="KpE-Wx-acD" customClass="ViewController" customModule="lesson_2_VCLifeCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4c-R8-Oby">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-Xi-pn0">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-Xi-pn0">
                                 <rect key="frame" x="16" y="36" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="1" green="0.99859894810000005" blue="0.99942349549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.63084345205689552" blue="0.047568217569798454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.95261086220000002" blue="0.13878383529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zOu-Ss-wWf" firstAttribute="bottom" secondItem="2kx-Xi-pn0" secondAttribute="bottom" constant="60" id="1YG-te-M8j"/>
                             <constraint firstItem="zOu-Ss-wWf" firstAttribute="trailing" secondItem="2kx-Xi-pn0" secondAttribute="trailing" constant="16" id="5Jr-AY-cgF"/>
@@ -35,7 +35,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zOu-Ss-wWf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Elg-jK-Xtj"/>
+                    <tabBarItem key="tabBarItem" title="Yellow" id="Elg-jK-Xtj"/>
                     <connections>
                         <outlet property="textView" destination="2kx-Xi-pn0" id="97y-cf-jxu"/>
                     </connections>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="209" y="552"/>
         </scene>
-        <!--Yellow-->
+        <!--Blue-->
         <scene sceneID="MLU-Bb-6aL">
             <objects>
-                <viewController title="Yellow" id="Ffc-a5-7bN" customClass="ViewController" customModule="lesson_2_VCLifeCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Blue" id="Ffc-a5-7bN" customClass="ViewController" customModule="lesson_2_VCLifeCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rS8-yz-wps">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.95261086220271252" blue="0.13878383534966754" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8fZ-KJ-R6X" firstAttribute="trailing" secondItem="sKe-a0-uON" secondAttribute="trailing" constant="16" id="ZlA-va-c8b"/>
                             <constraint firstItem="8fZ-KJ-R6X" firstAttribute="bottom" secondItem="sKe-a0-uON" secondAttribute="bottom" constant="60" id="cas-is-5AG"/>
@@ -69,7 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8fZ-KJ-R6X"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ggd-yR-Ial"/>
+                    <tabBarItem key="tabBarItem" title="Blue" id="Ggd-yR-Ial"/>
                     <connections>
                         <outlet property="textView" destination="sKe-a0-uON" id="IdY-7L-6iu"/>
                     </connections>
@@ -77,51 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9I8-1l-IOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1166" y="552"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="AfQ-JL-1uU">
-            <objects>
-                <tableViewController id="jAu-YC-zNR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H1Z-t8-Qt6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="w6r-c0-JFj">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w6r-c0-JFj" id="e4g-Lq-5AB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="jAu-YC-zNR" id="FUI-w5-rco"/>
-                            <outlet property="delegate" destination="jAu-YC-zNR" id="41R-sF-AJo"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hDo-PI-EsG"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Cz-iz-sfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3143" y="552"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GkP-cv-u8e">
-            <objects>
-                <navigationController id="MiD-0X-Q2G" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="daW-Lu-ec8">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="jAu-YC-zNR" kind="relationship" relationship="rootViewController" id="UMp-fF-b93"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DR7-Qr-bv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2193" y="552"/>
         </scene>
         <!--Red-->
         <scene sceneID="lR4-FT-L1A">
@@ -131,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-A0-NBo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-A0-NBo">
                                 <rect key="frame" x="16" y="36" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="1" green="0.99859894810000005" blue="0.99942349549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,7 +103,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2G-NB-Ohs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Q8f-Qe-8aa"/>
+                    <tabBarItem key="tabBarItem" title="Red" id="Q8f-Qe-8aa"/>
                     <connections>
                         <outlet property="textView" destination="Ere-A0-NBo" id="JVh-fZ-hfS"/>
                     </connections>

@@ -14,24 +14,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     func updateTV(_ function: String = #function) {
-        let currentText = getText(title: self.title, function: function)
-        textView.text = currentText
+        let currentText = ListOfMethods.shared.getText(title: self.title,
+                                                   function: function,
+                                                   backgroundColor: self.view.backgroundColor)
         
-        // Scroll to the bottom of list of called methods
-        textView.scrollRangeToVisible(NSMakeRange(currentText.count, 0))
+        textView.attributedText = currentText
+
+        // Scroll to the bottom of list of called methods:
         
+        textView.scrollRangeToVisible(NSMakeRange(currentText.length, 0))
         // I don't fully understand how it works, but these two bottom lines are necessary for correct scrolling
         // Maybe it`s happens because of this information from Apple documentation: "When scrolling is disabled, the scroll view does not accept touch events; it forwards them up the responder chain."
         textView.isScrollEnabled = false
         textView.isScrollEnabled = true
+        //
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textView.backgroundColor = self.view.backgroundColor?.getDarkColor()
-        //self.textView.textColor = self.view.backgroundColor.ge
         self.textView.layer.cornerRadius = 5
+        
         updateTV()
     }
     
