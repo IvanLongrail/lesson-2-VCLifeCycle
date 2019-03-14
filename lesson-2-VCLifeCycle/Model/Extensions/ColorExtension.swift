@@ -11,6 +11,7 @@ import UIKit
 
 extension UIColor {
 
+    // Background color of textView depends of view background
     func getDarkColor() -> UIColor {
         var h: CGFloat = 0
         var s: CGFloat = 0

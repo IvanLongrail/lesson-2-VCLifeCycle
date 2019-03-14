@@ -9,26 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var textView: UITextView!
     
     func updateTV(_ function: String = #function) {
-        let currentText = ListOfMethods.shared.getText(title: self.title,
-                                                   function: function,
-                                                   backgroundColor: self.view.backgroundColor)
-        
-        textView.attributedText = currentText
 
-        // Scroll to the bottom of list of called methods:
+        guard let currentText = ListOfVCMethods.shared.getAttributedText(title: self.title,
+                                                                         function: function,
+                                                                         backgroundColor: self.view.backgroundColor)
+            else { return }
+        textView.attributedText = currentText
+        print(function)
+
         
+        // Scroll to the bottom of list of called methods:
         textView.scrollRangeToVisible(NSMakeRange(currentText.length, 0))
-        // I don't fully understand how it works, but these two bottom lines are necessary for correct scrolling
-        // Maybe it`s happens because of this information from Apple documentation: "When scrolling is disabled, the scroll view does not accept touch events; it forwards them up the responder chain."
+        // I don't fully understand how it works, but these two bottom lines are necessary for correct scrolling.
+        // Maybe it`s happens because of this information from Apple documentation: "When scrolling is disabled, the scroll view does not accept touch events; it forwards them up the responder chain." :
         textView.isScrollEnabled = false
         textView.isScrollEnabled = true
-        //
     }
+    
     
     
     override func viewDidLoad() {
@@ -59,8 +60,22 @@ class ViewController: UIViewController {
         updateTV()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateTV()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateTV()
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        updateTV()
+    }
+
+    @IBAction func unwind(segue: UIStoryboardSegue) {
         updateTV()
     }
 }
