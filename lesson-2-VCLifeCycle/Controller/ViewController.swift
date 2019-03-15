@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         textView.attributedText = currentText
         print(function)
 
-        
         // Scroll to the bottom of list of called methods:
         textView.scrollRangeToVisible(NSMakeRange(currentText.length, 0))
         // I don't fully understand how it works, but these two bottom lines are necessary for correct scrolling.

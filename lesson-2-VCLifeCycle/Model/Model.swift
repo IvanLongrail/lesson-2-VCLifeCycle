@@ -16,7 +16,7 @@ enum VCMethods: String  {
     case viewDidAppear = "viewDidAppear"
     case viewWillDisappear = "viewWillDisappear"
     case viewDidDisappear = "viewDidDisappear"
-    case viewWillTransition = "viewWillTransition"
+    case viewWillTransition = "viewWillTransition(to:with:)"
     case viewWillLayoutSubviews = "viewWillLayoutSubviews()"
     case viewDidLayoutSubviews = "viewDidLayoutSubviews()"
     case unwindSegue = "unwind(segue:)"
